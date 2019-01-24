@@ -36,7 +36,7 @@ class App extends Component {
                     path="/profile/:id"
                     component={UserDetailedPage}
                   />
-                  <Route exact path="/settings" component={SettingsDashboard} />
+                  <Route path="/settings" component={SettingsDashboard} />
                   <Route exact path="/createEvent" component={EventForm} />
                 </Switch>
               </Container>
