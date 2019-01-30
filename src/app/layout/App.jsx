@@ -30,6 +30,11 @@ class App extends Component {
                     path="/event/:id"
                     component={EventDetailedPage}
                   />
+                  <Route
+                    exact
+                    path="/manage/:id"
+                    component={EventForm}
+                  />
                   <Route exact path="/people" component={PeopleDashboard} />
                   <Route
                     exact
