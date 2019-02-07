@@ -9,11 +9,14 @@ import PeopleDashboard from '../../features/user/PeopleDashboard/PeopleDashboard
 import UserDetailedPage from '../../features/user/UserDetailed/UserDetailedPage';
 import SettingsDashboard from '../../features/user/Settings/SettingsDashboard';
 import HomePage from '../../features/home/HomePage';
+import TestPage from '../../features/TestComponent/TestComponent';
+import ModalManager from '../../features/modals/ModalManager';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
+        <ModalManager />
         <Switch>
           <Route exact path="/" component={HomePage} />
         </Switch>
@@ -30,11 +33,8 @@ class App extends Component {
                     path="/event/:id"
                     component={EventDetailedPage}
                   />
-                  <Route
-                    exact
-                    path="/manage/:id"
-                    component={EventForm}
-                  />
+                  <Route exact path="/tests" component={TestPage} />
+                  <Route exact path="/manage/:id" component={EventForm} />
                   <Route exact path="/people" component={PeopleDashboard} />
                   <Route
                     exact
