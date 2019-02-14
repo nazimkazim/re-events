@@ -25,6 +25,7 @@ export const configureStore = preloadedState => {
   );
 
   const store = createStore(rootReducer, preloadedState, composedEnhancer);
+  
 
   return store;
 };
