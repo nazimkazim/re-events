@@ -9,7 +9,8 @@ import firebase from '../config/firebase';
 const rrfConfig = {
   userProfile: 'users',
   attachAuthIsReady: true,
-  useFirestoreForProfile: true
+  useFirestoreForProfile: true,
+  updateProfileOnLogin: false
 };
 
 export const configureStore = preloadedState => {
@@ -25,7 +26,6 @@ export const configureStore = preloadedState => {
   );
 
   const store = createStore(rootReducer, preloadedState, composedEnhancer);
-  
 
   return store;
 };
